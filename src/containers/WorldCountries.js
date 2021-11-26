@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
+import CountryDetails from '../components/CountryDetails';
 import CountrySelector from '../components/CountrySelector';
 
 const WorldCountries = () => {
 
     const [countries, setCountries] = useState([]);
-    const [selectedCountry, setSelectedCountry] = useState(null);
+    const [selectedCountryName, setSelectedCountryName] = useState('');
 
     useEffect(() => {
         getCountries();
@@ -17,13 +18,17 @@ const WorldCountries = () => {
     }
 
     const handleSelectedCountry = (country) => {
-        setSelectedCountry(country);
+        setSelectedCountryName(country);
+        console.log(selectedCountryName)
     }
+
+    const selectedCountry = countries.find((country) => country.name.common === selectedCountryName)
 
     return (
         <>
             <h1>I am the WorldCountries container</h1>
             <CountrySelector allCountries={countries} onCountrySelect={handleSelectedCountry}/>
+            <CountryDetails chosenCountry={selectedCountry}/>
         </>
     )
 
