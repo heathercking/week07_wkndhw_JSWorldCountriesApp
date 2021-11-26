@@ -35,7 +35,7 @@ const WorldCountries = () => {
 
     return (
         <>
-            <h1>The World's Countries</h1>
+            <h1>Countries of the World</h1>
             <CountrySelector allCountries={countries} onCountrySelect={handleSelectedCountry} />
             <CountryDetails chosenCountry={selectedCountry} />
             <FilterSelector onFilterSelect={handleSelectedFilter} />

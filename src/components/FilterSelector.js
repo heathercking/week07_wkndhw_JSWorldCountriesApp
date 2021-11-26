@@ -22,6 +22,7 @@ const FilterSelector = ( {onFilterSelect} ) => {
                 {/* <button onClick={handleChange} type="submit" name="filter" value="right">...drive on the right</button> */}
                 <button onClick={handleChange} type="submit" name="filter" value="left">...drive on the left</button>
                 <button onClick={handleChange} type="submit" name="filter" value="population">...have population less than 10,000</button>
+                <button onClick={handleChange} type="submit" name="filter" value="all">...just show me all the countries of the world!!</button>
             </div>
         </>
     )

@@ -25,6 +25,10 @@ const FilterCountries = ( { allCountries, chosenFilter } ) => {
             const results = allCountries.filter(country => country.population < 10000)
             return results;
         }
+        if (chosenFilter === "all") {
+            const results = allCountries.filter(country => country)
+            return results;
+        }
         
     }
 
