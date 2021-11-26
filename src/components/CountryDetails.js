@@ -42,7 +42,7 @@ const CountryDetails = ( {chosenCountry} ) => {
             <p>Capital City: {chosenCountry.capital}</p>
             <p>Region: {chosenCountry.region}</p>
             {/* <img src={chosenCountry.flags.png}></img> */}
-            <h3>Random fact...</h3>
+            <h3>Get a random fact about {chosenCountry.name.common}...</h3>
             <button onClick={handleClick}>surprise me</button>
             {/* <p>{randomFact}</p> */}
         </div>

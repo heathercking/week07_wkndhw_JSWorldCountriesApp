@@ -17,6 +17,14 @@ const FilterCountries = ( { allCountries, chosenFilter } ) => {
             const results = allCountries.filter(country => country.car.side === "right")
             return results;
         }
+        if (chosenFilter === "left") {
+            const results = allCountries.filter(country => country.car.side === "left")
+            return results;
+        }
+        if (chosenFilter === "population") {
+            const results = allCountries.filter(country => country.population < 10000)
+            return results;
+        }
         
     }
 
