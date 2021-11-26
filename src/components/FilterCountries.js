@@ -6,13 +6,27 @@ const FilterCountries = ( { allCountries, chosenFilter } ) => {
         return null
       }
 
-    const filteredLandlocked = allCountries.filter((country) => country.landlocked === true)
+    // const filteredCountries = allCountries.filter((country) => country.landlocked === true)
+
+    const filterCountries = () => {
+        if (chosenFilter === "landlocked") {
+            const results = allCountries.filter(country => country.landlocked === true)
+            return results;
+        }
+        if (chosenFilter === "right") {
+            const results = allCountries.filter(country => country.car.side === "right")
+            return results;
+        }
+        
+    }
+
+    const filteredCountries = filterCountries();
 
     return(
         <>
             <h3>Filtered countries...</h3>
             <ul>
-                {filteredLandlocked.map((country, index) => {
+                {filteredCountries.map((country, index) => {
                     return (
                         <li key={index}>
                             {country.name.common}</li>

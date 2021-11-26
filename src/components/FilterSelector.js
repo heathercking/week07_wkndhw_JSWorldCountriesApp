@@ -12,7 +12,8 @@ const FilterSelector = ( {onFilterSelect} ) => {
         <>
         <h2>Or select to view countries that...</h2>
             <select defaultValue="" onChange={handleChange}>
-                <option value="car.side.right">...drive on the right</option>
+                <option value="" selected>Choose filter</option>
+                <option value="right">...drive on the right</option>
                 <option value="landlocked">...are landlocked</option>
             </select>
         </>
