@@ -1,11 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import CountryDetails from '../components/CountryDetails';
 import CountrySelector from '../components/CountrySelector';
+import FilterCountries from '../components/FilterCountries';
+import FilterSelector from '../components/FilterSelector';
 
 const WorldCountries = () => {
 
     const [countries, setCountries] = useState([]);
     const [selectedCountryName, setSelectedCountryName] = useState('');
+    const [selectedFilter, setSelectedFilter] = useState('');
 
     useEffect(() => {
         getCountries();
@@ -19,16 +22,24 @@ const WorldCountries = () => {
 
     const handleSelectedCountry = (country) => {
         setSelectedCountryName(country);
-        console.log(selectedCountryName)
+        console.log(selectedCountryName);
+    }
+
+    const handleSelectedFilter = (filter) => {
+        setSelectedFilter(filter);
+        console.log(selectedFilter);
     }
 
     const selectedCountry = countries.find((country) => country.name.common === selectedCountryName)
+    
 
     return (
         <>
             <h1>I am the WorldCountries container</h1>
-            <CountrySelector allCountries={countries} onCountrySelect={handleSelectedCountry}/>
-            <CountryDetails chosenCountry={selectedCountry}/>
+            <CountrySelector allCountries={countries} onCountrySelect={handleSelectedCountry} />
+            <CountryDetails chosenCountry={selectedCountry} />
+            <FilterSelector onFilterSelect={handleSelectedFilter} />
+            <FilterCountries allCountries={countries} chosenFilter={selectedFilter} />
         </>
     )
 

@@ -14,6 +14,7 @@ const CountrySelector = ({ allCountries, onCountrySelect}) => {
 
     return (
         <>
+        <h2>Select a country of the World...</h2>
             <select defaultValue="" onChange={handleChange}>
                 <option value="" selected>Choose a Country of the World</option>
                 {countryOptions}
