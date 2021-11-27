@@ -1,4 +1,5 @@
 import React from 'react';
+import './filteredcountries.css'
 
 const FilterCountries = ( { allCountries, chosenFilter } ) => {
 
@@ -36,15 +37,18 @@ const FilterCountries = ( { allCountries, chosenFilter } ) => {
 
     return(
         <>
-            <h3>Filtered countries...</h3>
-            <ul>
-                {filteredCountries.map((country, index) => {
-                    return (
-                        <li key={index}>
-                            {country.name.common}</li>
-                    )
-                })}
-            </ul>
+            <div id="filtered">
+                <h3>Filtered countries</h3>
+                <ul>
+                    {filteredCountries.map((country, index) => {
+                        return (
+                            <li key={index}>
+                                {country.name.common}</li>
+                        )
+                    })}
+                </ul>
+            </div>
+
         </>
     )
 }

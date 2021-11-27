@@ -1,5 +1,6 @@
 import React from 'react';
 import Chart from "react-google-charts";
+import './bubblechart.css';
 
 const bubbleChart = ( { allCountries }) => {
 
@@ -13,24 +14,20 @@ const bubbleChart = ( { allCountries }) => {
     // countries.unshift(header);
 
  
-
+    
+    // took a while to get this! :-)
     const chartData = [['ID', 'Logitude', 'Latitude', 'Region', 'Population']]
     for (let i = 0; i < allCountries.length; i++) {
         var currentCountry = allCountries[i];
         chartData.push([currentCountry.cca3, parseFloat(currentCountry.latlng[1]), parseFloat(currentCountry.latlng[0]), currentCountry.region, currentCountry.population])
     }
 
-
-
-
-
-
     var Chart = require("react-google-charts").Chart;
 
     return (
         <>
             {/* <p>I am the bubble chart</p> */}
-            <div>
+            <div id="chart-area" align="center">
                 <Chart
                     width={1000}
                     height={'600px'}
@@ -44,8 +41,9 @@ const bubbleChart = ( { allCountries }) => {
                         bubble: { textStyle: { fontSize: 11 } },
                         // backgroundColor: "green",
                         axisTitlesPosition: 'none',
-                        chartArea: { left: 80, top: 40, width: '78%', height: '80%'},
+                        chartArea: { left: 70, top: 20, width: '88%', height: '80%'},
                         explorer: ['dragToZoom', 'dragToPan', 'rightClickToReset'],
+                        legend: {position: 'bottom'}
               
                     }}
                     

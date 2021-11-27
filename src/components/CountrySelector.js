@@ -1,4 +1,5 @@
 import React from 'react';
+import '../containers/worldcountries.css';
 
 const CountrySelector = ({ allCountries, onCountrySelect}) => {
 
@@ -14,7 +15,7 @@ const CountrySelector = ({ allCountries, onCountrySelect}) => {
 
     return (
         <>
-        <h2>Select a country of the World...</h2>
+        <h2>Select a country to view more details</h2>
             <select defaultValue="" onChange={handleChange}>
                 <option value="" selected>Choose a Country of the World</option>
                 {countryOptions}

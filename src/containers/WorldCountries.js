@@ -4,6 +4,7 @@ import CountryDetails from '../components/CountryDetails';
 import CountrySelector from '../components/CountrySelector';
 import FilterCountries from '../components/FilterCountries';
 import FilterSelector from '../components/FilterSelector';
+import './worldcountries.css'
 
 const WorldCountries = () => {
 
@@ -36,12 +37,23 @@ const WorldCountries = () => {
 
     return (
         <>
-            <h1>Countries of the World</h1>
+            <h1>countries of the world</h1>
+            {/* <h1 id="world">WORLD</h1> */}
             <BubbleChart allCountries={countries} />
-            <CountrySelector allCountries={countries} onCountrySelect={handleSelectedCountry} />
-            <CountryDetails chosenCountry={selectedCountry} />
-            <FilterSelector onFilterSelect={handleSelectedFilter} />
-            <FilterCountries allCountries={countries} chosenFilter={selectedFilter} />
+            <section class="options">
+                <div class="container grid">
+                    <div class="card">
+                        <CountrySelector allCountries={countries} onCountrySelect={handleSelectedCountry} />
+                        <CountryDetails chosenCountry={selectedCountry} />
+                    </div>
+                    <div class="card">
+                        <FilterSelector onFilterSelect={handleSelectedFilter} />
+                        <FilterCountries allCountries={countries} chosenFilter={selectedFilter} />
+                    </div>
+                </div>
+            </section>
+
+
         </>
     )
 

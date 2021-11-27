@@ -2,6 +2,7 @@
 
 .country-details {
     border: 1px black solid;
+    margin: auto;
     margin-top: 20px;
     padding: 10px;
     width: 70%;
