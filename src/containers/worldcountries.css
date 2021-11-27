@@ -1,3 +1,4 @@
+
 .container {
     max-width: 1100px;
     margin: auto;
@@ -6,11 +7,31 @@
 }
 
 .card {
+    background-color: #03045E;
+    color: #CAF0F8;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,4);
+    padding: 10px 20px 30px 20px;
+    margin: 10px;
+}
+
+.card-header {
+    background-color: #03045E;
+    width: 80%;
+    color: #CAF0F8;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,4);
+    padding: 30px 20px;
+    margin: 20px auto 20px;
+}
+
+.card-chart {
     background-color: #fff;
-    color: #333;
+    width: 1100px;
+    color: #CAF0F8;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-    padding: 20px;
+    padding: 20px 0 0 0;
     margin: 10px;
 }
 
@@ -21,4 +42,31 @@
     justify-content: center;
     align-items: top;
     height: 100%;
+}
+
+select {
+    border-radius: 10px;
+    padding: 10px;
+    color: #03045E;
+    font-weight: bold;
+}
+
+select:hover {
+    cursor: pointer;
+    color: #D81159;
+    /* transform: translateY(-3px); */
+}
+
+button {
+    border-radius: 10px;
+    padding: 10px;
+    color: #03045E;
+    font-weight: bold;
+    margin: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+    color: #D81159;
+    transform: translateY(-3px);
 }

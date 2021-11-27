@@ -1,6 +1,7 @@
 import React from 'react';
 import Chart from "react-google-charts";
 import './bubblechart.css';
+import '../containers/worldcountries.css'
 
 const bubbleChart = ( { allCountries }) => {
 
@@ -14,7 +15,7 @@ const bubbleChart = ( { allCountries }) => {
     // countries.unshift(header);
 
  
-    
+
     // took a while to get this! :-)
     const chartData = [['ID', 'Logitude', 'Latitude', 'Region', 'Population']]
     for (let i = 0; i < allCountries.length; i++) {
@@ -27,7 +28,7 @@ const bubbleChart = ( { allCountries }) => {
     return (
         <>
             {/* <p>I am the bubble chart</p> */}
-            <div id="chart-area" align="center">
+            <div class="card-chart" id="chart-area" align="center">
                 <Chart
                     width={1000}
                     height={'600px'}

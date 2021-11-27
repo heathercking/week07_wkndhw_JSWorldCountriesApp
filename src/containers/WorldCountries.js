@@ -37,7 +37,7 @@ const WorldCountries = () => {
 
     return (
         <>
-            <h1>countries of the world</h1>
+            <h1 class="card-header">countries of the <span id="wavy">world</span></h1>
             {/* <h1 id="world">WORLD</h1> */}
             <BubbleChart allCountries={countries} />
             <section class="options">
