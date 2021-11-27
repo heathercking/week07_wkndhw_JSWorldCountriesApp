@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import BubbleChart from '../components/BubbleChart';
 import CountryDetails from '../components/CountryDetails';
 import CountrySelector from '../components/CountrySelector';
 import FilterCountries from '../components/FilterCountries';
@@ -36,6 +37,7 @@ const WorldCountries = () => {
     return (
         <>
             <h1>Countries of the World</h1>
+            <BubbleChart allCountries={countries} />
             <CountrySelector allCountries={countries} onCountrySelect={handleSelectedCountry} />
             <CountryDetails chosenCountry={selectedCountry} />
             <FilterSelector onFilterSelect={handleSelectedFilter} />

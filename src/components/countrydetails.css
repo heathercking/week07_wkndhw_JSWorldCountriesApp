@@ -1,6 +1,14 @@
+/* @import '~leaflet/dist/leaflet.css'; */
+
 .country-details {
     border: 1px black solid;
     margin-top: 20px;
     padding: 10px;
     width: 70%;
+}
+
+
+#mapId {  
+    width: 100vw;  
+    height: 100vh; 
 }

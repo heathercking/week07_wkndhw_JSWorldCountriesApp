@@ -1,5 +1,8 @@
 import React from 'react';
+import { ScriptHTMLAttributes } from 'react';
 import './countrydetails.css';
+import countryMap from './countryMap';
+
 
 const CountryDetails = ( {chosenCountry} ) => {
 
@@ -7,7 +10,6 @@ const CountryDetails = ( {chosenCountry} ) => {
     if (!chosenCountry) {
         return null
       }
-
 
 
     const carSide = chosenCountry.car.side;
@@ -32,7 +34,6 @@ const CountryDetails = ( {chosenCountry} ) => {
     }
 
 
-
     
     return (
         <>
@@ -46,7 +47,8 @@ const CountryDetails = ( {chosenCountry} ) => {
             <button onClick={handleClick}>surprise me</button>
             {/* <p>{randomFact}</p> */}
         </div>
-
+        <div>
+        </div>
         </>
     )
 
