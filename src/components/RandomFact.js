@@ -12,7 +12,7 @@ const RandomFact = ( {country} ) => {
     const coatArms = country.coatOfArms.png;
     const weekStart = country.startOfWeek;
 
-    const randomFacts = [`In {country} they drive on the {carSide} of the road`, area, population, timezone, coatArms, weekStart];
+    const randomFacts = [`In country they drive on the carSide of the road`, area, population, timezone, coatArms, weekStart];
 
 
 

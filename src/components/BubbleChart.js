@@ -5,18 +5,7 @@ import '../containers/worldcountries.css'
 
 const bubbleChart = ( { allCountries }) => {
 
-    // const countries = allCountries.map((country) => {
-    //     return [country.cca3, parseFloat(country.latlng[0]), parseFloat(country.latlng[1]), country.population]
-    // })
 
-    // console.log(countries)
-
-    // const header = ['ID', 'Latitude', 'Logitude', 'Population'];
-    // countries.unshift(header);
-
- 
-
-    // took a while to get this! :-)
     const chartData = [['ID', 'Longitude', 'Latitude', 'Region', 'Population']]
     for (let i = 0; i < allCountries.length; i++) {
         var currentCountry = allCountries[i];
@@ -50,6 +39,14 @@ const bubbleChart = ( { allCountries }) => {
                     
                 />
             </div>
+
+
+
+
+
+
+
+            
             {/* <div>
                 <Chart
                     width={400}
