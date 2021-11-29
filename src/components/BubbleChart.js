@@ -17,7 +17,7 @@ const bubbleChart = ( { allCountries }) => {
  
 
     // took a while to get this! :-)
-    const chartData = [['ID', 'Logitude', 'Latitude', 'Region', 'Population']]
+    const chartData = [['ID', 'Longitude', 'Latitude', 'Region', 'Population']]
     for (let i = 0; i < allCountries.length; i++) {
         var currentCountry = allCountries[i];
         chartData.push([currentCountry.cca3, parseFloat(currentCountry.latlng[1]), parseFloat(currentCountry.latlng[0]), currentCountry.region, currentCountry.population])
